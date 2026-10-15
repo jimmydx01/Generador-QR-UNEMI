@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#172a45" />
+    <title>Lector de pases QR | UNEMI</title>
+    <link rel="stylesheet" href="./estilos.css" />
+    <script defer src="./asset/plugin/qrCode.min.js"></script>
+    <script defer src="./asset/js/lector.js"></script>
+  </head>
+  <body>
+    <header class="encabezado">
+      <img
+        src="./img/logo.png"
+        alt="Universidad Estatal de Milagro"
+        class="logo"
+      />
+      <nav class="nav-paginas" aria-label="Navegación principal">
+        <a href="./generar.html">Generador</a>
+        <a href="./modulos.html">Módulos CRAI</a>
+        <a href="./lector.html" aria-current="page">Lector QR</a>
+      </nav>
+    </header>
+    <div class="franja-naranja" aria-hidden="true"></div>
+
+    <main class="contenedor">
+      <h1><span>Lector</span> de pases QR</h1>
+      <p class="intro-modulos">
+        Escanea el pase generado para ver el nombre y el módulo de destino.
+      </p>
+
+      <div class="lector-controles">
+        <button class="btn" id="btn-camara" type="button">
+          Activar cámara
+        </button>
+        <label for="archivo-qr">O selecciona una captura del código QR</label>
+        <input
+          id="archivo-qr"
+          type="file"
+          accept="image/*"
+          capture="environment"
+        />
+      </div>
+
+      <video class="lector-video" id="video" playsinline muted hidden></video>
+      <canvas id="qr-canvas" hidden></canvas>
+      <p id="estado-lector" class="estado" role="status" aria-live="polite">
+        Activa la cámara o carga una imagen con el pase QR.
+      </p>
+
+      <section
+        class="resultado-acceso"
+        id="resultado-acceso"
+        aria-live="polite"
+        hidden
+      >
+        <h2 id="bienvenida"></h2>
+        <p id="modulo-bienvenida"></p>
+        <a
+          class="btn btn-modulo"
+          id="continuar-modulo"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Continuar al módulo</a
+        >
+      </section>
+
+      <p class="nota-modulos">
+        Este pase es demostrativo: el nombre se escribe al generarlo y no
+        comprueba identidad ni autoriza acceso institucional.
+      </p>
+    </main>
+
+    <footer class="footer">
+      <p>Universidad Estatal de Milagro - Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>

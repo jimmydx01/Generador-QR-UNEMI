@@ -1,0 +1,387 @@
+:root {
+  color-scheme: light;
+  --navy: #172a45;
+  --orange: #f4774b;
+  --paper: #f4f6f8;
+  --muted: #5e6875;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--navy);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  background: var(--navy);
+}
+
+.logo {
+  display: block;
+  width: min(190px, 70vw);
+  max-height: 64px;
+  object-fit: contain;
+}
+
+.nav-paginas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+
+.nav-paginas a {
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-paginas a:hover,
+.nav-paginas a[aria-current="page"] {
+  border-bottom-color: var(--orange);
+}
+
+.franja-naranja {
+  height: 7px;
+  background: var(--orange);
+}
+
+.contenedor {
+  width: min(100% - 2rem, 42rem);
+  margin: 3rem auto;
+  flex: 1;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 2rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+h1 span {
+  color: var(--orange);
+}
+
+.formulario {
+  text-align: left;
+}
+
+.formulario-pase {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.fila-formulario {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem;
+}
+
+.fila-formulario input,
+.formulario-pase input,
+.formulario-pase select {
+  width: 100%;
+  min-width: 0;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #aeb8c4;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--navy);
+  font: inherit;
+}
+
+.formulario-pase .btn {
+  margin-top: 0.5rem;
+}
+
+.fila-formulario input:focus-visible,
+.formulario-pase input:focus-visible,
+.formulario-pase select:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid #f7b69f;
+  outline-offset: 2px;
+}
+
+.btn {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--orange);
+  border-radius: 4px;
+  background: var(--orange);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: #d85d35;
+  background: #d85d35;
+}
+
+.btn:disabled {
+  border-color: #c5cbd2;
+  background: #c5cbd2;
+  cursor: not-allowed;
+}
+
+.estado {
+  min-height: 1.5rem;
+  margin: 1.25rem 0 0.75rem;
+  color: var(--muted);
+}
+
+.contenedorQR {
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  border: 1px dashed #aeb8c4;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.contenedorQR canvas,
+.contenedorQR img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-descarga {
+  margin-top: 1rem;
+}
+
+.contenedor-modulos {
+  width: min(100% - 2rem, 68rem);
+  margin: 2.5rem auto 3rem;
+  flex: 1;
+}
+
+.contenedor-modulos h1 {
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.intro-modulos {
+  max-width: 48rem;
+  margin: 0 auto 2rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.rejilla-modulos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+  gap: 1rem;
+}
+
+.modulo {
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  align-items: center;
+  gap: 0.75rem 1rem;
+  padding: 1rem;
+  border: 1px solid #d3dae2;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.modulo h2,
+.modulo p {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.modulo h2 {
+  font-size: 1.2rem;
+}
+
+.modulo p {
+  color: var(--muted);
+}
+
+.codigo-modulo {
+  display: grid;
+  width: 116px;
+  aspect-ratio: 1;
+  place-items: center;
+  padding: 0.35rem;
+  border: 1px dashed #aeb8c4;
+  background: #fff;
+}
+
+.codigo-modulo canvas,
+.codigo-modulo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.acciones-modulo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.btn-modulo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.acciones-modulo .btn-modulo:not(:first-child) {
+  border-color: var(--navy);
+  background: #fff;
+  color: var(--navy);
+}
+
+.acciones-modulo .btn-modulo:not(:first-child):hover {
+  background: #edf1f5;
+}
+
+.btn-descargar-modulo {
+  padding: 0.45rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.btn-descargar-modulo:disabled {
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+.nota-modulos {
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.enlace-lector {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.lector-controles {
+  display: grid;
+  gap: 0.9rem;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.lector-controles label {
+  font-weight: 600;
+}
+
+.lector-video {
+  display: block;
+  width: min(100%, 560px);
+  margin: 1rem auto;
+  aspect-ratio: 4 / 3;
+  border-radius: 4px;
+  background: #101a28;
+  object-fit: cover;
+}
+
+.resultado-acceso {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-left: 4px solid var(--orange);
+  background: #fff;
+  text-align: left;
+}
+
+.resultado-acceso h2 {
+  margin: 0 0 0.5rem;
+}
+
+.resultado-acceso p {
+  margin: 0 0 1rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.footer {
+  padding: 1rem;
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 520px) {
+  .encabezado {
+    flex-direction: column;
+  }
+
+  .contenedor {
+    margin-top: 2rem;
+  }
+
+  .contenedor-modulos {
+    margin-top: 2rem;
+  }
+
+  .fila-formulario {
+    grid-template-columns: 1fr;
+  }
+
+  .fila-formulario .btn {
+    width: 100%;
+  }
+
+  .modulo {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 0.85rem;
+  }
+
+  .acciones-modulo {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .acciones-modulo .btn-modulo {
+    width: 100%;
+  }
+
+  .codigo-modulo {
+    width: 100px;
+  }
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#172a45" />
+    <title>Biblioteca y módulos CRAI | UNEMI</title>
+    <link rel="stylesheet" href="./estilos.css" />
+  </head>
+  <body>
+    <header class="encabezado">
+      <img
+        src="./img/logo.png"
+        alt="Universidad Estatal de Milagro"
+        class="logo"
+      />
+      <nav class="nav-paginas" aria-label="Navegación principal">
+        <a href="./generar.html">Generador</a>
+        <a href="./modulos.html" aria-current="page">Módulos CRAI</a>
+        <a href="./lector.html">Lector QR</a>
+      </nav>
+    </header>
+    <div class="franja-naranja" aria-hidden="true"></div>
+
+    <main class="contenedor-modulos">
+      <h1><span>Biblioteca</span> y módulos CRAI</h1>
+      <p class="intro-modulos">
+        Elige un módulo para crear un pase QR personalizado con tu nombre.
+        Después, escanéalo en el lector para ver tu bienvenida y continuar al
+        servicio.
+      </p>
+
+      <section
+        class="rejilla-modulos"
+        aria-label="Accesos a módulos de biblioteca"
+      >
+        <article class="modulo">
+          <h2>Servicios bibliotecarios</h2>
+          <p>
+            Información sobre los servicios físicos y electrónicos de la
+            biblioteca.
+          </p>
+          <div class="acciones-modulo">
+            <a
+              class="btn btn-modulo"
+              href="./generar.html?modulo=servicios-bibliotecarios"
+              >Generar pase de acceso</a
+            >
+            <a
+              class="btn btn-modulo"
+              href="https://www.unemi.edu.ec/index.php/crai/servicios-bibliotecarios/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Abrir módulo</a
+            >
+          </div>
+        </article>
+
+        <article class="modulo">
+          <h2>KOHA</h2>
+          <p>
+            Catálogo bibliográfico institucional para consultar libros y
+            materiales.
+          </p>
+          <div class="acciones-modulo">
+            <a class="btn btn-modulo" href="./generar.html?modulo=koha"
+              >Generar pase de acceso</a
+            >
+            <a
+              class="btn btn-modulo"
+              href="http://koha.unemi.edu.ec/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Abrir módulo</a
+            >
+          </div>
+        </article>
+
+        <article class="modulo">
+          <h2>UTECA</h2>
+          <p>
+            Biblioteca digital con libros, cursos y otros recursos educativos.
+          </p>
+          <div class="acciones-modulo">
+            <a class="btn btn-modulo" href="./generar.html?modulo=uteca"
+              >Generar pase de acceso</a
+            >
+            <a
+              class="btn btn-modulo"
+              href="https://uteca.unemi.edu.ec/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Abrir módulo</a
+            >
+          </div>
+        </article>
+
+        <article class="modulo">
+          <h2>Repositorio institucional</h2>
+          <p>
+            Tesis, libros, artículos y producción académica de UNEMI en acceso
+            abierto.
+          </p>
+          <div class="acciones-modulo">
+            <a class="btn btn-modulo" href="./generar.html?modulo=repositorio"
+              >Generar pase de acceso</a
+            >
+            <a
+              class="btn btn-modulo"
+              href="https://repositorio.unemi.edu.ec/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Abrir módulo</a
+            >
+          </div>
+        </article>
+
+        <article class="modulo">
+          <h2>Recursos electrónicos</h2>
+          <p>
+            Acceso a recursos académicos con las credenciales institucionales.
+          </p>
+          <div class="acciones-modulo">
+            <a
+              class="btn btn-modulo"
+              href="./generar.html?modulo=recursos-electronicos"
+              >Generar pase de acceso</a
+            >
+            <a
+              class="btn btn-modulo"
+              href="https://login.proxy.unemi.edu.ec/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Abrir módulo</a
+            >
+          </div>
+        </article>
+      </section>
+
+      <p class="nota-modulos">
+        Los pases muestran el nombre que escribas; no verifican identidad ni
+        reemplazan el inicio de sesión institucional. Algunas plataformas
+        requieren credenciales UNEMI.
+      </p>
+    </main>
+
+    <footer class="footer">
+      <p>Universidad Estatal de Milagro - Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>

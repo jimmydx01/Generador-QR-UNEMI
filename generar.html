@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#172a45" />
+    <title>Pase QR de acceso | UNEMI</title>
+    <link rel="stylesheet" href="./estilos.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    ></script>
+    <script defer src="./asset/js/index.js"></script>
+  </head>
+  <body>
+    <header class="encabezado">
+      <img
+        src="./img/logo.png"
+        alt="Universidad Estatal de Milagro"
+        class="logo"
+      />
+      <nav class="nav-paginas" aria-label="Navegación principal">
+        <a href="./generar.html" aria-current="page">Generador</a>
+        <a href="./modulos.html">Módulos CRAI</a>
+        <a href="./lector.html">Lector QR</a>
+      </nav>
+    </header>
+    <div class="franja-naranja" aria-hidden="true"></div>
+
+    <main class="contenedor">
+      <h1><span>Genera</span> tu pase QR</h1>
+      <form id="formulario" class="formulario formulario-pase">
+        <label for="nombre">Nombre y apellido</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Escribe tu nombre"
+          autocomplete="name"
+          maxlength="60"
+          required
+        />
+
+        <label for="modulo">Módulo al que ingresas</label>
+        <select id="modulo" name="modulo" required>
+          <option value="" selected disabled>Selecciona un módulo</option>
+          <option value="servicios-bibliotecarios">
+            Servicios bibliotecarios
+          </option>
+          <option value="koha">KOHA - Catálogo bibliográfico</option>
+          <option value="uteca">UTECA - Biblioteca digital</option>
+          <option value="repositorio">Repositorio institucional</option>
+          <option value="recursos-electronicos">Recursos electrónicos</option>
+        </select>
+        <button class="btn" type="submit">Generar pase QR</button>
+      </form>
+
+      <p id="estado" class="estado" role="status" aria-live="polite">
+        Indica tu nombre y el módulo al que deseas ingresar.
+      </p>
+      <div
+        id="contenedorQR"
+        class="contenedorQR"
+        aria-label="Vista previa del código QR"
+      ></div>
+      <button class="btn btn-descarga" id="btn-download" type="button" disabled>
+        Descargar pase PNG
+      </button>
+      <p class="nota-modulos">
+        El pase incluye el nombre escrito y el módulo seleccionado. No verifica
+        identidad ni sustituye el inicio de sesión institucional.
+      </p>
+      <a class="enlace-lector" href="./lector.html">Ir al lector de pases QR</a>
+    </main>
+
+    <footer class="footer">
+      <p>Universidad Estatal de Milagro - Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>
